@@ -1,0 +1,35 @@
+//Tabulation Solution 
+
+const fib = (n)=> {
+    if (n <= 2) return 1;
+
+    let table = [0, 1, 1];
+    for (let i = 3; i <= n; i++){
+        table[i] = table[i - 1] + table[i -2];
+    }
+    return table[n]
+}
+
+// Alternate Solution
+const fib2 = (n)=> {
+    const table = Array( n + 1 ).fill(0);
+    table[1] = 1;
+    for (let i = 0; i <= n; i++){
+        table[i + 1] += table[i];
+        table[i + 2] += table[i];
+    }
+    return table[n]
+}
+
+//Tabulation Solution 
+//Time Complexity O(n) Linear
+//Space Complexity O(n) Linear
+
+console.log(fib(6))
+console.log(fib(8))
+console.log(fib(13))
+console.log(fib(700))
+console.log(fib2(6))
+console.log(fib2(8))
+console.log(fib2(13))
+console.log(fib2(700))
