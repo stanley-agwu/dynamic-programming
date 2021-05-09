@@ -59,27 +59,29 @@ const commonPrimeDivisors = (A, B) => {
 
 //Golden Method ***100%**
 const commonPrimeDivisors2 = (A, B) => {
-
     const gcd = (e, f) => {
         if (f === 0) return e 
         return gcd(f, e % f)
     }
-
     const sameDivisors = (g, h) => {
         if (g === h === 0) return true
         let cDiv = gcd(g, h)
-        let v = g * h
 
-        while (v !== 1){
-            let vDiv = gcd(cDiv, v) 
+        while (g !== 1){
+            let vDiv = gcd(cDiv, g) 
             if (vDiv === 1) return false 
-            v /= vDiv 
+            g /= vDiv 
+        }
+        while (h !== 1){
+            let vDiv = gcd(cDiv, h) 
+            if (vDiv === 1) return false 
+            h /= vDiv 
         }
         return true
     }
     let count = 0
     for (let i = 0; i < A.length; i += 1){
-        if (sameDivisors(A[i]) && sameDivisors(B[i])) count += 1
+        if (sameDivisors(A[i], B[i])) count += 1
     }
     return count
   
