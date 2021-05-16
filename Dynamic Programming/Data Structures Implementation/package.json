@@ -1,0 +1,11 @@
+{
+  "name": "data",
+  "version": "1.0.0",
+  "description": "",
+  "main": "breadthFirstSearchTraversal.js",
+  "scripts": {
+    "start": "node depthFirstSearchTraversal-Q1.js"
+  },
+  "author": "Stanley Agwu",
+  "license": "ISC"
+}
