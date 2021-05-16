@@ -4,7 +4,7 @@
   "description": "",
   "main": "breadthFirstSearchTraversal.js",
   "scripts": {
-    "start": "node depthFirstSearchTraversal-Q1.js"
+    "start": "node breadthFirstSearchTraversal.js"
   },
   "author": "Stanley Agwu",
   "license": "ISC"
