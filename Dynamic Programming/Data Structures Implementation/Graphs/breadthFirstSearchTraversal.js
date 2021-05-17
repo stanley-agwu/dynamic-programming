@@ -39,11 +39,11 @@ class Graph {
                     visitedNodes.add(adjacency)
                 }
             }
-            console.log(node.value)
             if (node.value === endNode.value){
-                console.log("Found the node!")
+                console.log("Found the node! =>", node.value)
                 return 
             }
+            console.log(node.value)
         }
     }
 }
