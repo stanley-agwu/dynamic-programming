@@ -1,0 +1,11 @@
+{
+  "name": "dynamic-programming",
+  "version": "1.0.0",
+  "description": "",
+  "main": "countDistinctSlices.js",
+  "scripts": {
+    "start": "node countDistinctSlices.js"
+  },
+  "author": "Stanley Agwu",
+  "license": "MIT"
+}
