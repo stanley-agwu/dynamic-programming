@@ -1,6 +1,11 @@
-//memoization
+//Fibonacci Problem
 
-//js object, keys will be arg to fn, value will be the return value
+//write a function fib(n) that takes in a number as arguement. 
+//The function should return the nth number of the fibonacci 
+//sequence. The first and second numbers of the sequence is 1. 
+//To generate the next number of the sequence, we sum the previous two.
+
+//Using memoization
 
 const fib = (n, memo={}) =>{
     if (n in memo) return memo[n];
