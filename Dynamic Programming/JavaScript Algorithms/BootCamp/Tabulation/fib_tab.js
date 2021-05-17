@@ -1,4 +1,11 @@
-//Tabulation Solution 
+//Fibonacci Problem
+
+//write a function fib(n) that takes in a number as arguement. 
+//The function should return the nth number of the fibonacci 
+//sequence. The first and second numbers of the sequence is 1. 
+//To generate the next number of the sequence, we sum the previous two.
+
+//Tabulation Solution using Iteration
 
 const fib = (n)=> {
     if (n <= 2) return 1;
