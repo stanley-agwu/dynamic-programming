@@ -14,7 +14,7 @@ const canSum = (targetSum, numArray)=> {
     table[0] = true;
     for (let i=0; i<=targetSum; i++){
         if (table[i] === true){
-            for (num of numArray){
+            for (let num of numArray){
                 table[ i + num ] = true;
             }
         }

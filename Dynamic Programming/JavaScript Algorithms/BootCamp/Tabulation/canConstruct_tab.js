@@ -27,7 +27,7 @@ const canConstruct = (targetWord, wordBank)=> {
 
 //Tabulation Solution 
 //m = targetWorld.length  n=wordBank.length
-//Time Complexity O(m * n) Polynomial
+//Time Complexity O(m^2 * n) Polynomial
 //Space Complexity O(m) 
 
 console.log(canConstruct("abcdef", ["ab", "cd", "abc", "abcd", "def"]));// true
