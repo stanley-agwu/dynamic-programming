@@ -23,37 +23,12 @@ const testData = [
     ["20", "17"]
 ]
 
-const cogTest = (data) => {
-    let myArr = []
-    for (let item of data){
-        let objData = {}
-        let time = "time"
-        let value =  "value"
-        objData[time] = item[0]
-        objData[value] = parseInt(item[1])
-        myArr = [...myArr, objData]
-    }
-    return myArr
-}
+const cogData = testData.map((data) => ({ time: data[0], value: data[1] }))
 
 //2. Create a new array of objects from it of time values less 
 // than a threshold = 27
-const cogCheck = (data, threshold) => {
-    const objArray = cogTest(data) 
 
-    return objArray.every(({value}) => value <= threshold)
-}
-const cogManipulate = (data, threshold) => {
-    const objArray = cogTest(data) 
-
-    const mapArray = objArray.filter(item => {
-        return item.value <= threshold
-        }
-    )
-    return mapArray
-
-}
+const cogManipulated = (cogData, threshold) => cogData.filter((item) => item.value <= threshold);
 
 //console.log(cogTest(testData))
-console.log(cogCheck(testData, 32))
 //console.log(cogManipulate(testData, 20))
