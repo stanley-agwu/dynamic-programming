@@ -15,5 +15,6 @@ const solution = (A) => {
     }
 }
 
-const A = Array(101).fill(0).map((_, index) => index);
+const A = Array(100).fill(0).map((_, index) => index + 1);
+// console.log(A);
 solution(A);
