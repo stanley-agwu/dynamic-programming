@@ -45,7 +45,7 @@ const char_counter2 = (word) =>{
 }
 
 
-const char_counter = (word) =>{
+const char_counter3 = (word) =>{
     let results = {};
     
     for (let i = 0 ; i < word.length; i++){
