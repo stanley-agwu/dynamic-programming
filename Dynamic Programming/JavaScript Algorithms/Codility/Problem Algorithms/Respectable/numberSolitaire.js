@@ -1,6 +1,8 @@
 // In a given array, find the subset of maximal sum in which the distance 
 // between consecutive elements is at most 6.
 
+
+// solution ***50%***
 const solution2 = (A) => {
     const N = A.length;
 
@@ -51,6 +53,8 @@ const solution2 = (A) => {
     }
 }
 
+
+// solution ***37%***
 const solution = (A) => {
     let i = 1;
     let k = 0;
