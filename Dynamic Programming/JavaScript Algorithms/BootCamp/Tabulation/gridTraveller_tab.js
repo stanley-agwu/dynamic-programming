@@ -16,7 +16,7 @@ const gridTraveller = (m, n)=> {
         for (let j=0; j<=n; j++){
             const current = table[i][j];
             if (j + 1 <= n) table[i][j + 1] += current;// Bound checking to ensure within bound
-            if (i + 1 <= m) table[i+1][j] += current;// Bound checking to ensure within bound
+            if (i + 1 <= m) table[i + 1][j] += current;// Bound checking to ensure within bound
         }
         
     }

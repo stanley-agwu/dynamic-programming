@@ -19,6 +19,7 @@ const countConstruct = (targetWord, wordBank)=> {
             } 
         }
     }
+    console.log(table);
     return table[targetWord.length];
 }
 
@@ -28,8 +29,8 @@ const countConstruct = (targetWord, wordBank)=> {
 //Space Complexity O( m )
 
 console.log(countConstruct("purple", ["p", "ur", "purp", "le", "purpl"]));// 2
-console.log(countConstruct("abcdef", ["ab", "cd", "abc", "abcd", "def"]));//1
-console.log(countConstruct("skateboard", ["sk", "bo", "ate", "rd", "boar"])); //0
-console.log(countConstruct("enteropotentpot", ["a", "p", "ent", "enter", "ot", "o", "t"]));// 4
-console.log(countConstruct("eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeef", 
-["e", "ee", "eee", "eeee", "eeeee", "eeeeeee"]));// 0
+// console.log(countConstruct("abcdef", ["ab", "cd", "abc", "abcd", "def"]));//1
+// console.log(countConstruct("skateboard", ["sk", "bo", "ate", "rd", "boar"])); //0
+// console.log(countConstruct("enteropotentpot", ["a", "p", "ent", "enter", "ot", "o", "t"]));// 4
+// console.log(countConstruct("eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeef", 
+// ["e", "ee", "eee", "eeee", "eeeee", "eeeeeee"]));// 0
