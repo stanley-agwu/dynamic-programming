@@ -16,7 +16,7 @@ const unique = (array) =>{
 //Time Complexity ==> O(n) ~ O(n)
 //Space Complexity ==> O(n)
 
-//Better Soluton--Using Set Data Structures
+//Better Soluton--Using Set Data Structure
 const unique2 = (array) =>{
     const onlyUniques = new Set();
 
@@ -28,7 +28,17 @@ const unique2 = (array) =>{
 //Time Complexity ==> O(n) Linear 
 //Space Complexity ==> O(n)
 
+
+// Best solution ---Using Set Data Structure
+const unique3 = (arr) => {
+    return Array.from(new Set(arr));
+}
+//Time Complexity ==> O(n) Linear 
+//Space Complexity ==> O(n)
+
 console.log(unique(['cat', 'dog', 'rat', 'dog', 'cat', 'bird']))//['cat', 'dog', 'rat', 'bird']
 console.log(unique([1, 3, 5, 5, 2, 3, 2, 7, 1, 2, 4, 7]))//[ 1, 3, 5, 2, 7, 4]
 console.log(unique2(['cat', 'dog', 'rat', 'dog', 'cat', 'bird']))//['cat', 'dog', 'rat', 'bird']
 console.log(unique2([1, 3, 5, 5, 2, 3, 2, 7, 1, 2, 4, 7]))//[ 1, 3, 5, 2, 7, 4]
+console.log(unique3(['cat', 'dog', 'rat', 'dog', 'cat', 'bird']))//['cat', 'dog', 'rat', 'bird']
+console.log(unique3([1, 3, 5, 5, 2, 3, 2, 7, 1, 2, 4, 7]))//[ 1, 3, 5, 2, 7, 4]
