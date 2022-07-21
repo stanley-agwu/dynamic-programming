@@ -5,10 +5,8 @@
 
 //Golden Solution --- that is scalable
 const fizzbuzz = (n) => {
-    let result;
-
-    for (let i = 0; i < n; i += 1) {
-        result = '';
+    for (let i = 1; i <= n; i += 1) {
+        let result = '';
 
         if (i % 3 === 0) result += 'fizz';
         if (i % 5 === 0) result += 'buzz';
