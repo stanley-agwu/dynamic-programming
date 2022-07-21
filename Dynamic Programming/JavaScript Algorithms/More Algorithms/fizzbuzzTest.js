@@ -1,9 +1,13 @@
-// Write a simple fizzBuzz game that is scalable if given an Array A of numbers from 1 to 100
+//Write a program that console logs the numbers from 1 to n.
+//But for multiples of three print "fizz" instead of the number 
+//and for the multiples of five print "buzz". For numbers which 
+//are multiples of both three and five "fizzbuzz".
 
-const solution = (A) => {
+//Golden Solution --- that is scalable
+const fizzbuzz = (n) => {
     let result;
 
-    for (let i of A) {
+    for (let i = 0; i < n; i += 1) {
         result = '';
 
         if (i % 3 === 0) result += 'fizz';
@@ -15,6 +19,34 @@ const solution = (A) => {
     }
 }
 
-const A = Array(100).fill(0).map((_, index) => index + 1);
+// const A = Array(100).fill(0).map((_, index) => index + 1);
 // console.log(A);
-solution(A);
+fizzbuzz(100);
+
+//Using Iterative Method
+const fizzbuzz1 = (n) => {
+    for (let i = 1; i <= n; i++){
+        if (i % 3 === 0 && i % 5 === 0) console.log("fizzbuzz");
+        else if (i % 5 === 0) console.log("buzz");
+        else if (i % 3 === 0) console.log("fizz");
+        else console.log(i);
+    }  
+}
+
+//Using Recursive Method
+const fizzbuzz2 = (n) => {
+    if (n === 0 ) return;
+    if (n % 3 === 0 && n % 5 === 0) console.log("fizzbuzz");
+    else if (n % 5 === 0) console.log("buzz");
+    else if (n % 3 === 0) console.log("fizz");
+    else console.log(n)
+
+   fizzbuzz2(n - 1)
+     
+}
+
+
+// fizzbuzz(5)
+// fizzbuzz2(5)
+fizzbuzz(15)
+fizzbuzz2(15)
