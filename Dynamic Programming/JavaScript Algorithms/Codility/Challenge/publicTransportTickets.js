@@ -1,5 +1,8 @@
+// PublicTransportTicketsAlgo
 // Compute the minimum amount of money that you have to spend on tickets for some upcoming days.
 
+
+// Golden Solution ***100%***
 const publicTransportTickets = (A) => {
     const M = Math.max(...A) + 30;
     const dp = Array(M + 1).fill(0);
