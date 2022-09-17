@@ -9,7 +9,7 @@ const countUniqueValues1 = (arr) => {
     
     return result.length
 }
-
+// set Data structure can also be used with Strings
 
 //Good Solution => O( n )
 const countUniqueValues2 = (arr) => {
@@ -23,7 +23,6 @@ const countUniqueValues2 = (arr) => {
     }
     return i + 1;
 }
-
 
 console.log(countUniqueValues1([1,2,2,5,7,7,99]))
 console.log(countUniqueValues1([ ]))
