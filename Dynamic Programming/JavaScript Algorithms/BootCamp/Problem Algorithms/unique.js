@@ -13,10 +13,11 @@ const unique = (array) =>{
     }
     return newArray;
 }
-//Time Complexity ==> O(n) ~ O(n)
+//Time Complexity ==> O(n * n) ~ O(n^2)
 //Space Complexity ==> O(n)
 
 //Better Soluton--Using Set Data Structure
+// set Data structure can also be used with Strings as with Arrays
 const unique2 = (array) =>{
     const onlyUniques = new Set();
 
