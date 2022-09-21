@@ -28,9 +28,25 @@ const gridTraveller = (m, n, memo={}) =>{
 //Time Complexity O(m * n) Polynomial
 //Space Complexity O(n + m) 
 
-console.log(gridTraveller(2, 2))
-console.log(gridTraveller(2, 3))
-console.log(gridTraveller(3, 3))
-console.log(gridTraveller(4, 4))
-console.log(gridTraveller(5, 5))
-console.log(gridTraveller(16, 16))
+console.log(gridTraveller(2, 2)) // 2
+console.log(gridTraveller(2, 3)) // 3
+console.log(gridTraveller(3, 3)) // 6
+console.log(gridTraveller(4, 4)) // 20
+console.log(gridTraveller(5, 5)) // 70
+console.log(gridTraveller(16, 16)) // 155117520
+console.log(gridTraveller(30, 30)) // 30067266499541040
+
+const bruteForce = (m, n) => {
+    if (m === 0 && n === 0) return 0;
+    if (m === 1 && n === 1) return 1;
+
+    return gridTraveller(m - 1, n) + gridTraveller(m, n - 1);
+}
+
+console.log(bruteForce(2, 2)) // 2
+console.log(bruteForce(2, 3)) // 3
+console.log(bruteForce(3, 3)) // 6
+console.log(bruteForce(4, 4)) // 20
+console.log(bruteForce(5, 5)) // 70
+console.log(bruteForce(16, 16)) // 155117520
+console.log(bruteForce(30, 30)) // 30067266499541040
