@@ -11,7 +11,7 @@
 class Node{
     constructor(val){
         this.val = val 
-        this.left = null 
+        this.left = null
         this.right = null
     }
 }
@@ -35,43 +35,47 @@ B.right = E
 C.right = F
 
 //Iterative Method
-// const depthFirstSearchTraversal = (root) => {
-//     const stack = [ root ]
-//     while (stack.length > 0){
-//         const curr = stack.pop()
-//         console.log(curr.val)
-//         if (curr.right !== null){
-//             stack.push(curr.right)
-//         }
-//         if (curr.left !== null){
-//             stack.push(curr.left)
-//         }
-//     }
-// }
+const depthFirstSearchTraversalI = (root) => {
+    if (root === null) return;
+
+    const stack = [ root ]
+    while (stack.length) {
+        const curr = stack.pop()
+        console.log(curr.val)
+        if (curr.right !== null){
+            stack.push(curr.right)
+        }
+        if (curr.left !== null){
+            stack.push(curr.left)
+        }
+    }
+}
+
 //Recursive Method
-const depthFirstSearchTraversal = (root) => {
-    if (root === null) return
+const depthFirstSearchTraversalR = (root) => {
+    if (root === null) return;
 
     console.log(root.val)
 
-    depthFirstSearchTraversal(root.left)
-    depthFirstSearchTraversal(root.right)
+    depthFirstSearchTraversalR(root.left)
+    depthFirstSearchTraversalR(root.right)
 }
 
-depthFirstSearchTraversal(A)
+depthFirstSearchTraversalI(A);
+depthFirstSearchTraversalR(A);
 
 
 //Write a function, sumTree(root, target), that takes in the root of a tree as arguement. 
 //The function should return the sum of all values in the binary tree. You can assume
 //that the tree only contains number values.
 
-// class Node{
-//     constructor(val){
-//         this.val = val 
-//         this.left = null 
-//         this.right = null
-//     }
-// }
+class Node{
+    constructor(val){
+        this.val = val 
+        this.left = null 
+        this.right = null
+    }
+}
 
 const G = new Node (3)
 const H = new Node (2)
@@ -93,27 +97,28 @@ H.right = K
 I.right = L
 
 //Iterative Method
-// const sumTree = (root) => {
-//     const stack = [ root ]
-//     let sum = 0
-//     while (stack.length > 0){
-//         const curr = stack.pop()
-//         sum += curr.val
-//         if (curr.right !== null){
-//             stack.push(curr.right)
-//         }
-//         if (curr.left !== null){
-//             stack.push(curr.left)
-//         }
-//     }
-//     return sum
-// }
-
-//Recursive Method
-const sumTree = (root) => {
-    if (root === null) return 0
-
-    return sumTree(root.left) + root.val + sumTree(root.right)
+const sumTreeI = (root) => {
+    const stack = [ root ]
+    let sum = 0
+    while (stack.length > 0){
+        const curr = stack.pop()
+        sum += curr.val
+        if (curr.right !== null){
+            stack.push(curr.right)
+        }
+        if (curr.left !== null){
+            stack.push(curr.left)
+        }
+    }
+    return sum
 }
 
-console.log(sumTree (G)) // 19
+//Recursive Method
+const sumTreeR = (root) => {
+    if (root === null) return 0;
+
+    return sumTreeR(root.left) + root.val + sumTreeR(root.right)
+}
+
+console.log(sumTreeI (G)) // 19
+console.log(sumTreeR (G)) // 19
