@@ -44,8 +44,35 @@ const bestSum = (targetSum, numArray, memo={})=> {
 //Time Complexity O(n * m * m) = O(n * m^2) Polynomial
 //Space Complexity O(m * m) = O(m^2)
 
-console.log(bestSum(7, [2, 3, 5, 1])) // [5, 2]
-console.log(bestSum(23, [5, 7, 2, 1])) //false
-console.log(bestSum(300, [7, 14, 45, 58, 5, 2])) //false
-console.log(bestSum(2703, [2 ,19, 107, 199, 543, 342, 10, 5])) //true
-console.log(bestSum(1007, [5 ,3, 29, 57, 97, 44, 25])) //true
+// console.log(bestSum(7, [2, 3, 5, 1])) // [5, 2]
+// console.log(bestSum(23, [5, 7, 2, 1])) // [ 2, 7, 7, 7 ]
+// console.log(bestSum(300, [7, 14, 45, 58, 5, 2])) // [5,  5, 58, 58,58, 58, 58]
+// console.log(bestSum(2703, [2 ,19, 107, 199, 543, 342, 10, 5])) //[10, 342, 342, 342, 543, 543, 543,  19, 19]
+// console.log(bestSum(1007, [5 ,3, 29, 57, 97, 44, 25])) // [97, 97, 97, 97, 97, 97, 97, 97, 97, 97, 29,  3, 5]
+
+const bestSum2 = (targetSum, numArray, memo={}) => {
+    if (targetSum in memo) return memo[targetSum];
+    if (targetSum === 0) return [];
+    if (targetSum < 0) return null;
+
+    let results = [];
+
+    for (let num of numArray) {
+        const remainder = bestSum2(targetSum - num, numArray, memo);
+        if (remainder) {
+            const combination = [...remainder, num];
+            if (!results.length || results.length > combination.length) {
+                results = combination;
+                memo[targetSum] = results;
+            }
+        }
+    }
+    if (results.length) return memo[targetSum];
+    return null;
+}
+
+// console.log(bestSum2(7, [2, 3, 5, 1])) // [5, 2]
+// console.log(bestSum2(23, [5, 7, 2, 1])) // [ 2, 7, 7, 7 ]
+// console.log(bestSum2(300, [7, 14, 45, 58, 5, 2])) // [5,  5, 58, 58,58, 58, 58]
+// console.log(bestSum2(2703, [2 ,19, 107, 199, 543, 342, 10, 5])) //[10, 342, 342, 342, 543, 543, 543,  19, 19]
+// console.log(bestSum2(1007, [5 ,3, 29, 57, 97, 44, 25])) // [97, 97, 97, 97, 97, 97, 97, 97, 97, 97, 29,  3, 5]
