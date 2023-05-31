@@ -16,6 +16,20 @@ const unique = (array) =>{
 //Time Complexity ==> O(n * n) ~ O(n^2)
 //Space Complexity ==> O(n)
 
+//Naive Solution ---Using reduce Array method
+const myArray = ["a", "b", "a", "b", "c", "e", "e", "c", "d", "d", "d", "d"];
+const myArrayWithNoDuplicates = myArray.reduce((accumulator, currentValue) => {
+  if (!accumulator.includes(currentValue)) {
+    return [...accumulator, currentValue];
+  }
+  return accumulator;
+}, []);
+
+//Time Complexity ==> O(n * n) ~ O(n^2)
+//Space Complexity ==> O(n)
+
+console.log(myArrayWithNoDuplicates);
+
 //Better Soluton--Using Set Data Structure
 // set Data structure can also be used with Strings as with Arrays
 const unique2 = (array) =>{
