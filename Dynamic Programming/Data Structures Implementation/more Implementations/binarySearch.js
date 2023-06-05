@@ -19,11 +19,13 @@ const binarySearchI = (array, target) => {
 
     }
     return null
-    
-
 }
+
+
+
 //Recursive Approach
 //[ O(log n) - Time Complexity & O(log n) - Space Complexity ]
+
 const binarySearchR = (array, target) => {
     return _binarySearchR(array, target, 0, array.length - 1)  
 }
