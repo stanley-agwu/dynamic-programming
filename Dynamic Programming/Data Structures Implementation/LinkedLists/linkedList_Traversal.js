@@ -19,7 +19,7 @@ c.next = d;
 // A -> B -> C -> D
 
 // Traverse Iteratively
-// Time Complexity => O(n) Space Complexity => O(n)
+// Time Complexity => O(n) Space Complexity => O(1)
 const traverseLinkedListI = (head) => {
   let current = head;
   let str = '';
