@@ -62,9 +62,10 @@ const _deleteValue = (prev, curr, target) => {
 }
 
 const print = (head) =>{
-    if (head === null){
-        return " "
+    if (head.next === null){
+        return head.val;
     }
+    
     return head.val + " => " + print(head.next)
 }
 
