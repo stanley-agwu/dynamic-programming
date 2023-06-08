@@ -24,8 +24,8 @@ C.next = D
 D.next = E
 
 const print = (head) =>{
-    if (head === null){
-        return " "
+    if (head.next === null){
+        return head.val;
     }
     return head.val + " => " + print(head.next)
 }
