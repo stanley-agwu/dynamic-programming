@@ -34,7 +34,7 @@ const reverseString1 = (str) => {
 //Time Complexity => O(n)
 //Space Complexity => O(1)
 
-//Reversing String Using Array Destructuring => O(n)
+//Reversing String Using Array Destructuring => O(n/2)
 const reverseString2 = (str) => {
     const N = str.length
     const M = Math.floor(N/2)
@@ -50,7 +50,7 @@ const reverseString2 = (str) => {
     // return Array2.join("")
     return Array.join("")
 }
-//Time Complexity => O(n)
+//Time Complexity => O(n/2)
 //Space Complexity => O(1)
 
 //First Naive Solution
