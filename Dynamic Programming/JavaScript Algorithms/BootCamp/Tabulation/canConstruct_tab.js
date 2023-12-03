@@ -12,7 +12,7 @@
 const canConstruct = (targetWord, wordBank)=> {
     const table = Array( targetWord.length + 1 ).fill(false);
     table[0] = true;
-    for (let i=0; i <= targetWord.length; i++){
+    for (let i = 0; i <= targetWord.length; i++){
         if (table[i] === true){
             for (let word of wordBank){
                 //if the word matches the characters starting at position i

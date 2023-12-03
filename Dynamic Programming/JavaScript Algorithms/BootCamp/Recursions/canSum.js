@@ -10,14 +10,20 @@
 //Using memoization
 
 const canSum = (targetSum, numArray, memo={})=> {
-    if (targetSum in memo) return memo[targetSum];
+    if (targetSum in memo) {
+        return memo[targetSum];
+    }
 
-    if(targetSum === 0) return true;
-    if (targetSum < 0) return false;
+    if(targetSum === 0) {
+        return true;
+    }
+    if (targetSum < 0) {
+        return false;
+    }
 
     for (let num of numArray){
         const remainder = targetSum - num;
-        if (canSum(remainder, numArray, memo) === true){
+        if (canSum(remainder, numArray, memo) === true) {
             memo[targetSum] = true;
             return true;
         }

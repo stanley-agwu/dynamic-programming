@@ -12,9 +12,9 @@
 const canSum = (targetSum, numArray)=> {
     const table = Array( targetSum + 1 ).fill(false);
     table[0] = true;
-    for (let i=0; i<=targetSum; i++){
-        if (table[i] === true){
-            for (let num of numArray){
+    for (let i = 0; i <= targetSum; i++) {
+        if (table[i] === true) {
+            for (let num of numArray) {
                 table[ i + num ] = true;
             }
         }

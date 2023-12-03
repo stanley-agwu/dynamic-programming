@@ -10,14 +10,18 @@
 //Using memoization
 
 const canConstruct = (targetWord, wordBank, memo={}) => {
-    if (targetWord in memo) return memo[targetWord]
+    if (targetWord in memo) {
+        return memo[targetWord];
+    }
     
-    if (targetWord === "") return true;
+    if (targetWord === "") {
+        return true;
+    }
 
     for (let word of wordBank){
         if (targetWord.indexOf(word) === 0){ //To ensure that word is a starting prefix
             const suffix = targetWord.slice(word.length)
-            if (canConstruct(suffix, wordBank, memo) === true){
+            if (canConstruct(suffix, wordBank, memo) === true) {
                 memo[targetWord] = true;
                 return true
             }

@@ -12,7 +12,7 @@ const fib = (n)=> {
 
     let table = [0, 1, 1];
     for (let i = 3; i <= n; i++){
-        table[i] = table[i - 1] + table[i -2];
+        table[i] = table[i - 1] + table[i - 2];
     }
     return table[n]
 }
@@ -22,9 +22,9 @@ const fib2 = (n)=> {
     const table = Array( n + 1 ).fill(0);
     table[1] = 1;
     for (let i = 2; i <= n; i++){
-        // table[i + 1] += table[i];
-        // table[i + 2] += table[i];
-        table[i] = table[i - 1] + table[i - 2];
+        table[i + 1] += table[i];
+        table[i + 2] += table[i];
+        // table[i] = table[i - 1] + table[i - 2];
     }
     return table[n]
 }

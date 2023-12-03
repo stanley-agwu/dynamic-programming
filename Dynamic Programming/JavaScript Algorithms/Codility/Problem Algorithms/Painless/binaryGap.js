@@ -14,7 +14,8 @@ const binaryGap = (N) => {
     let bin = base2Conversion(N)
     const M = bin.length 
 
-    let count = results = 0
+    let count = 0
+    let results = 0;
 
     for (let  i = 0; i < M; i += 1){   
         if (bin[i] === "1"){
