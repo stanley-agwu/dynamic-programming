@@ -9,8 +9,8 @@ const palindrome = (str) =>{
     const M = Math.floor(N/2)
     let i = 0
     while(i < M){
-        if (str[i] != str[N - i - 1]) return false
-        ++i
+        if (str[i] !== str[N - i - 1]) return false
+        i += 1;
     }
     return true
 }

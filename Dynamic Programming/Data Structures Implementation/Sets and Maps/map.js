@@ -1,8 +1,8 @@
 const nameMap = new Map([['abby', 23], ['bell', 45], ['charly', 90]]);
 
 // has -> returns true or false if it has key
-console.log(nameMap.has(23)); // true
-console.log(nameMap.has(55)); // false
+console.log(nameMap.has(23)); // false
+console.log(nameMap.has('bell')); // true
 
 // set -> adds a new key-value pair to the map
 nameMap.set('dolce', 82);

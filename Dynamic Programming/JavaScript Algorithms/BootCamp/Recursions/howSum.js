@@ -10,10 +10,16 @@
 //Using memoization
 
 const howSum = (targetSum, numArray, memo={}) => {
-    if (targetSum in memo) return memo[targetSum];
+    if (targetSum in memo) {
+        return memo[targetSum];
+    }
 
-    if(targetSum === 0) return [];
-    if (targetSum < 0) return null;
+    if(targetSum === 0) {
+        return [];
+    }
+    if (targetSum < 0) {
+        return null;
+    }
 
     for (const num of numArray){
         const remainder = targetSum - num;
