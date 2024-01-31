@@ -52,5 +52,6 @@ const medianOf2SortedArrays = (num1, num2) => {
   }
 }
 
-console.log(medianOf2SortedArrays([1, 2], [3, 4]));
-console.log(medianOf2SortedArrays([1, 3], [2]));
+console.log(medianOf2SortedArrays([1, 2], [3, 4])); // 2.5
+console.log(medianOf2SortedArrays([1, 3], [2])); // 2
+console.log(medianOf2SortedArrays([1, 3, 5, 8, 9, 11], [2, 4, 6, 7, 15, 20])); // 6.5

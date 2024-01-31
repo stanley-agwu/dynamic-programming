@@ -3,7 +3,7 @@
 //and for the multiples of five print "buzz". For numbers which 
 //are multiples of both three and five "fizzbuzz".
 
-//Golden Solution --- that is scalable
+//Great Solution 
 const fizzbuzz = (n) => {
     for (let i = 1; i <= n; i += 1) {
         let result = '';

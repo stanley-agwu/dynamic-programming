@@ -1,6 +1,6 @@
 // TURING ---- Most Repeated Character
 
-// Given a a string s, return the most frequent character (an alphabet) in the string s.
+// Given a string s, return the most frequent character (an alphabet) in the string s.
 
 const solution = (s) => {
     const prefixHash = {};

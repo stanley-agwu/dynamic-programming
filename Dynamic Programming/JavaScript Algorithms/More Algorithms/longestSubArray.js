@@ -3,23 +3,34 @@
 
 const longestSubArray = (A, S) => {
     const N = A.length 
-    let result = value = sum = left = right = 0
-    let pointers = []
-    let pointA = pointB =  0
+    let result = 0;
+    let value = 0;
+    let sum = 0;
+    let left = 0;
+    let right = 0;
+    let pointers = [];
+    let pointA = 0;
+    let pointB =  0;
 
     while (left < N){
         while (right < N && sum <= S){
-            pointA = left
+            pointA = left;
             sum += A[right]
 
-            if(sum === S) pointB = right
+            if(sum === S) {
+                pointB = right;
+            }
             
             right += 1
         }
-        if (sum > S) sum -= A[left]
+        if (sum > S) {
+            sum -= A[left];
+        }
 
         value = pointB - pointA
-        if (value > result) pointers = [pointA, pointB]
+        if (value > result) {
+            pointers = [pointA, pointB];
+        }
         result = Math.max(value, result)
         
         left += 1
